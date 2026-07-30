@@ -23,7 +23,8 @@ int main(){
     int target;
     cout << "\nEnter a tagret number: ";
     cin >> target;
-    
+
+    // binary search
     int low = 0;
     int high = n - 1;
     int found = 0;
