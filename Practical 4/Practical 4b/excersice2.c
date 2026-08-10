@@ -25,10 +25,11 @@ int main(){
     char *arr[] = {"apple", "banana", "cherry", "date", "fig", "grape"};
     char temp[100];
     int n = sizeof(arr) / sizeof(arr[0]);
-    // printf("ENter target: ");
-    // fgets(temp, sizeof(temp), stdin);
-    const char *target = "fig";
-    
+    const char *target = NULL;
+    printf("ENter target: ");
+    fgets(temp, sizeof(temp), stdin);
+    temp[strcspn(temp, "\n")] = '\0'; // getting the actual string
+    target = temp;
     int k = binary_search(arr, 0, n - 1, target);
     if(k != -1){
         printf("Element found at position %d", k+1);
