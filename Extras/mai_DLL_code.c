@@ -12,7 +12,7 @@ struct Node* insert_beg(struct Node **headr, int d){
     newNode->data = d;
     newNode->next = *headr;
     struct Node *t = *headr;
-    (*headr)->prev = newNode;
+    t->prev = newNode;
     *headr = newNode;
     return newNode;
     free(t);
