@@ -37,8 +37,8 @@ int main() {
     third->data = 26;
     third->next = NULL;
 
-    struct Node* sex = add_first(head, 69);
-    struct Node *tep = sex;
+    struct Node* first = add_first(head, 69);
+    struct Node* tep = first;  // new head
     struct Node* last = add_last(third, 99);
     while (tep != NULL){
         printf("data: %d\n", tep->data);
@@ -49,7 +49,7 @@ int main() {
     free(head);
     free(second);
     free(third);
-    free(sex);
+    free(first);
     free(last);
     return 0;
 }
