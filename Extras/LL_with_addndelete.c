@@ -19,6 +19,10 @@ struct Node* add_last(struct Node* pr, int val){
     pr->next = t;
     return t;
 }
+
+void delete_elem(struct Node* snd_last){
+    snd_last->next = NULL;
+}
 int main() {
     /*struct Node *head = NULL;
     struct Node *second = NULL;
