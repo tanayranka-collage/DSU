@@ -37,7 +37,7 @@ node *enqueue(node **f, node **r, int d){
         (*r)->next = n;
     }
     n->next = NULL;
-    *r = n;
+    //*r = n;
     if(*f == NULL){
         *f = n;
     }
